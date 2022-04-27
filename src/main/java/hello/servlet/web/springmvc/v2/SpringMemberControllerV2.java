@@ -19,7 +19,7 @@ public class SpringMemberControllerV2 {
 	private MemberRepository memberRepository = MemberRepository.getInstance();
 
 	@RequestMapping("/new-form")
-	public ModelAndView newForm(){
+	public ModelAndView newForm() {
 		return new ModelAndView("new-form");
 	}
 
@@ -45,6 +45,4 @@ public class SpringMemberControllerV2 {
 		mv.addObject("members", members);
 		return mv;
 	}
-
-
 }

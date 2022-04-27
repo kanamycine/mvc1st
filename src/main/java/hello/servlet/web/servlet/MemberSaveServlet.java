@@ -18,7 +18,9 @@ public class MemberSaveServlet extends HttpServlet {
 	private MemberRepository memberRepository = MemberRepository.getInstance();
 
 	@Override
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws
+			ServletException,
+			IOException {
 
 		System.out.println("MemberSaveServlet.service");
 		String username = request.getParameter("username");
@@ -37,9 +39,9 @@ public class MemberSaveServlet extends HttpServlet {
 				"<body>\n" +
 				"성공\n" +
 				"<ul>\n" +
-				"    <li>id="+member.getId()+"</li>\n" +
-				"    <li>username="+member.getUsername()+"</li>\n" +
-				" <li>age="+member.getAge()+"</li>\n" + "</ul>\n" +
+				"    <li>id=" + member.getId() + "</li>\n" +
+				"    <li>username=" + member.getUsername() + "</li>\n" +
+				" <li>age=" + member.getAge() + "</li>\n" + "</ul>\n" +
 				"<a href=\"/index.html\">메인</a>\n" + "</body>\n" +
 				"</html>");
 	}

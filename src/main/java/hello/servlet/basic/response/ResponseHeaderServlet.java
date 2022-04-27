@@ -13,7 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "responseHeaderServlet", urlPatterns = "/response-header")
 public class ResponseHeaderServlet extends HttpServlet {
 	@Override
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws
+			ServletException,
+			IOException {
 		//[status-line]
 		response.setStatus(HttpServletResponse.SC_OK);
 		//response.setStatus(HttpServletResponse.SC_BAD_REQUEST);

@@ -28,13 +28,15 @@ public class FrontControllerServletV3 extends HttpServlet {
 	}
 
 	@Override
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws
+			ServletException,
+			IOException {
 		System.out.println("FrontControllerServletV3.service");
 
 		String requestURI = request.getRequestURI();
 
 		ControllerV3 controller = controllerMap.get(requestURI);
-		if (controller == null){
+		if (controller == null) {
 			response.setStatus(HttpServletResponse.SC_NOT_FOUND);
 			return;
 		}
@@ -43,7 +45,7 @@ public class FrontControllerServletV3 extends HttpServlet {
 		Map<String, String> paramMap = createParamMap(request);
 		ModelView mv = controller.process(paramMap);
 		//-> 논리 이름 new-form;
-		String viewName= mv.getViewName();
+		String viewName = mv.getViewName();
 		MyView view = viewResolver(viewName);
 
 		view.render(mv.getModel(), request, response);

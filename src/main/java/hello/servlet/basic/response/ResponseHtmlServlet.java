@@ -12,7 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "responseHtmlServlet", urlPatterns = "/response-html")
 public class ResponseHtmlServlet extends HttpServlet {
 	@Override
-	protected void service(HttpServletRequest requset, HttpServletResponse response) throws ServletException, IOException {
+	protected void service(HttpServletRequest requset, HttpServletResponse response) throws
+			ServletException,
+			IOException {
 		response.setContentType("text/html");
 		response.setCharacterEncoding("utf-8");
 

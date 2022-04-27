@@ -19,7 +19,9 @@ public class MemberListServlet extends HttpServlet {
 	private MemberRepository memberRepository = MemberRepository.getInstance();
 
 	@Override
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws
+			ServletException,
+			IOException {
 		List<Member> members = memberRepository.findAll();
 
 		response.setContentType("text/html");
@@ -49,7 +51,7 @@ public class MemberListServlet extends HttpServlet {
 		w.write("    </tr>");
 */
 
-		for(Member member : members) {
+		for (Member member : members) {
 			w.write("    <tr>");
 			w.write("			<td>" + member.getId() + "</td>");
 			w.write("			<td>" + member.getUsername() + "</td>");

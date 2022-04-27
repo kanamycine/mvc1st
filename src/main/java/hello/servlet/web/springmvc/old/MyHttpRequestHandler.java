@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Component;
 import org.springframework.web.HttpRequestHandler;
 
-@Component ("/springmvc/request-handler")
+@Component("/springmvc/request-handler")
 public class MyHttpRequestHandler implements HttpRequestHandler {
 	@Override
 	public void handleRequest(HttpServletRequest request, HttpServletResponse response) throws

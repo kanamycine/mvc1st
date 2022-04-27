@@ -12,7 +12,9 @@ import hello.servlet.web.frontcontroller.v2.ControllerV2;
 public class MemberFormControllerV2 implements ControllerV2 {
 
 	@Override
-	public MyView process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public MyView process(HttpServletRequest request, HttpServletResponse response) throws
+			ServletException,
+			IOException {
 		return new MyView("/WEB-INF/views/new-form.jsp");
 	}
 }

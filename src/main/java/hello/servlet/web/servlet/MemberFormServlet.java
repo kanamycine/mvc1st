@@ -17,7 +17,9 @@ public class MemberFormServlet extends HttpServlet {
 	private MemberRepository memberRepository = MemberRepository.getInstance();
 
 	@Override
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws
+			ServletException,
+			IOException {
 		response.setContentType("text/html");
 		response.setCharacterEncoding("utf-8");
 
